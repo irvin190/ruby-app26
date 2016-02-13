@@ -1,4 +1,5 @@
 == README
 
 Irvin Rodriguez
-I will be working on this new app
+I will be working on this new app.
+2/16/2016
