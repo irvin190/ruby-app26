@@ -1,12 +1,18 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 h1 {
   color:#770000;
 }
 
 body {
   margin-bottom: 50px;
+  background-color: #e6e6e6;
 }
 
 .footer {
@@ -17,6 +23,20 @@ body {
   background-color: #101010;
 }
 
+.footer > .container {
+  width: auto;
+}
+
 .container .text-muted {
-  margin: 15px 0;
+  margin: 17px 0;
+}
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
+.carousel-caption {
+  color: red;
+  font-size: 1.5em;
+  font-weight: bold;
 }
