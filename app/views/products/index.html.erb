@@ -4,7 +4,9 @@
 
 <div class= "container-fluid">
   <div class= "row">
-<!--    <% @products.each do |product| %>
+
+<!-- NOT USING THE CODE BELOW 
+    <% @products.each do |product| %>
       <div class="col-md-4 col-sm-2">
         <%= image_tag(product.image_url, class: "img-responsive") %>
         <h2><%= product.name %></h2>
@@ -16,13 +18,16 @@
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </div><!-- END COL 
     <% end %> -->
+
+
   <% @products.each do |product| %>
     <%= render partial: "loop", locals: {product: product} %>
   <% end %>
+
   </div>
 </div> 
 
-<!-- CODE USING PARTIAL: _product.html -->
+<!-- CODE USING PARTIAL FOR TABLE: _product.html -->
 <!--
 <table>
   <thead>
