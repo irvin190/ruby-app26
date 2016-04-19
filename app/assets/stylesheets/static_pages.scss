@@ -72,3 +72,26 @@ body {
   background-color: white;
   color: black;
 }
+
+.merch_search {
+  color: #C23838;
+  border-radius: 2px;
+}
+
+.label {
+  font-size: 1.2em;
+  color: red;
+}
+
+.navbar-form {
+  padding-top: 6px;
+}
+
+.edit_button {
+  background-color: white;
+  border-radius: 2px;
+}
+
+.edit_button:active {
+  transform: translateY(3px);
+}

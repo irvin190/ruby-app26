@@ -4,12 +4,13 @@
   <title>MyNewApp</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 <nav class="navbar navbar-inverse navbarnavbar-default" role="navigation">
   <div class="container-fluid">
@@ -23,7 +24,13 @@
       <a class="navbar-brand" href="#">My New App</a>
     </div>
 
-    <div class="collapse navbar-collapse" id="navlist">
+  <div class="collapse navbar-collapse" id="navlist">
+    <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
+      <%= label_tag(:q, "Search:", class: "label") %>
+      <%= text_field_tag(:q, nil, placeholder: "Search Our Merchandise", size: 25, class: "merch_search") %>
+      <%= submit_tag("Search", class: "edit_button") %>
+    <% end %>
+
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/">Home </a></li>
         <li><a href="/products">Merch</a></li>
@@ -31,6 +38,7 @@
         <li><a href="/static_pages/contact">Contact Me</a></li>
       </ul>
     </div>
+
   </div>
 </nav>
 
