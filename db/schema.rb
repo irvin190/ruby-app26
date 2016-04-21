@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311012939) do
+ActiveRecord::Schema.define(version: 20160420221948) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160311012939) do
     t.datetime "updated_at",                          null: false
     t.string   "colour"
     t.decimal  "price",       precision: 5, scale: 2
+    t.string   "size"
   end
 
 end
